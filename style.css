@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Tilt Neon', cursive;
+    background: linear-gradient(to right,rgb(10, 36, 3),rgb(15, 65, 13));
+}
+
+.background{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.text h1{
+    color: rgb(252, 252, 248);
+    font-weight: bolder;
+    font-size: 35px;
+}
+.text ul{
+    text-decoration: none;
+    color: rgb(199, 195, 195);
+    font-size: 20px;
+    list-style: none;
+}
+.text{
+    text-align: center;
+    margin-bottom: 30px;
+    flex-basis: 30%;
+}
+
+.gallery{
+    display: grid;
+    grid-auto-rows: 120px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+    flex-basis: 50%;
+}
+
+.box{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: top;
+    background-color: #222;
+    background-blend-mode: hard-light;
+}
+
+.row-2{
+    grid-row: span 2;
+}
+.col-2{
+    grid-column: span 2;
+}
+
+.box:hover{
+    transition: all ease-in-out 1s;
+    background-position: center;
+    background-color: transparent;
+    background-blend-mode: overlay;
+    box-shadow: 5px 5px 5px black;
+}
+@media only screen and (max-width: 1150px) {
+    .background{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .gallery{
+        width: 90%;
+        grid-auto-rows: 170px;
+        gap: 10px;
+    }
+     .box{
+        grid-row: span 1;
+        grid-column: span 3 ;
+    } 
+} 
